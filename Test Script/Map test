@@ -1,0 +1,12 @@
+chmod -r data/bad_perms.csv
+
+echo -e "~~ Common file loading test ~~"
+
+echo -n "Testing empty input - "
+./maze > tmp
+if grep -q "Empty maze name, please entry again" tmp;
+then
+    echo "PASS"
+else
+    echo "FAIL"
+fi
